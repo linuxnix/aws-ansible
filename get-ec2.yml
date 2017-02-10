@@ -1,0 +1,8 @@
+- hosts: localhost
+  connection: local
+  gather_facts: False
+  tasks:
+    - ec2_remote_facts:
+    filters:
+      instance-state-name: running
+      Values: "i-06cb4577abad6a303","i-0b4a61a93cdc1e5b9"
